@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+
+<body>
+
+<script>
+
+    let student = {
+        name: "VIKAS",
+        id: "3045",
+        city: "GHAZIABAD",
+
+        learning: function() {
+            console.log("Learning tech courses");
+            console.log(student.name);
+        }
+    };
+
+    
+    student.pincode = 201009;
+
+    
+    student.yoga = function() {
+        student.subject = ["web", "dsa", "oops"];
+    };
+
+    
+    student.learning();
+    student.yoga();
+
+    console.log(student);
+    console.log(student.subject);
+
+</script>
+
+</body>
+</html>
