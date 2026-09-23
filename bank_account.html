@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Account</title>
+</head>
+
+<body>
+
+    <h1>Bank Account Management</h1>
+
+    <script>
+
+        class BankAccount {
+
+            constructor(accountNo, holderName, balance) {
+                this.accountNo = accountNo;
+                this.holderName = holderName;
+                this.balance = balance;
+            }
+
+            deposit(amount) {
+                this.balance += amount;
+                console.log("Amount Deposited:", amount);
+            }
+
+            withdraw(amount) {
+                if (amount > this.balance) {
+                    console.log("Insufficient Balance");
+                } else {
+                    this.balance -= amount;
+                    console.log("Amount Withdrawn:", amount);
+                }
+            }
+
+            displayBalance() {
+                console.log("Account No:", this.accountNo);
+                console.log("Holder Name:", this.holderName);
+                console.log("Balance:", this.balance);
+            }
+
+            static bankInfo() {
+                console.log("Bank Name: ICCI Bank");
+                console.log("Bank provides banking services.");
+            }
+        }
+
+        let account1 = new BankAccount(101, "Prakhar", 5000);
+        let account2 = new BankAccount(102, "Vikas", 3000);
+
+        BankAccount.bankInfo();
+        account1.deposit(1000);
+        account1.withdraw(2000);
+        account1.displayBalance();
+        account2.deposit(500);
+        account2.withdraw(4000);
+        account2.displayBalance();
+
+    </script>
+
+</body>
+</html>
