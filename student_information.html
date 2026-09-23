@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Student</title>
+</head>
+<body>
+
+<script>
+    class student {
+        static count = 0;
+
+        constructor(name, roll_No, marks) {
+            this.name = name;
+            this.rollNo = roll_No;
+            this.marks = marks;
+
+            student.count++;
+        }
+
+        display() {
+            console.log("Student Information");
+            console.log("Name:", this.name);
+            console.log("Roll No:", this.rollNo);
+            console.log("Marks:", this.marks);
+
+            if (this.marks >= 20) {
+                console.log("Pass");
+            } else {
+                console.log("Fail");
+            }
+
+            console.log("----------------");
+        }
+    }
+
+    let student1 = new student("Prakhar", 2503215300136, 40);
+    let student2 = new student("Ravi", 2503215300139, 60);
+
+    student1.display();
+    student2.display();
+
+    console.log("Total Students:", student.count);
+</script>
+
+</body>
+</html>
